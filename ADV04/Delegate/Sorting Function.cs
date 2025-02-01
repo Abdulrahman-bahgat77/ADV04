@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ADV04.Delegate
 {
-    public delegate bool CompareFuncDelegate<T>(T A, T B);
+    //public delegate bool CompareFuncDelegate<T>(T A, T B);
     internal class SortingFunction<T>
     {
-        public static void BubbleSort(T[] arr, CompareFuncDelegate<T> comparedelegate)
+        public static void BubbleSort(T[] arr, Func<T,T,bool> comparedelegate)
         {
             if (arr is not null)
             {
